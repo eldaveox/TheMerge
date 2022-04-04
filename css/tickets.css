@@ -1,3 +1,38 @@
 body {
+    min-height: 100%;
+}
+
+#splatter {
+    min-width: 100vw;
     min-height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 30%;
+  }
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+#participate1, #participate2{
+    border-color: rgb(206, 206, 206);
+    border-width: 2px;
+    color: rgb(144, 0, 201);
+}
+#participate1:hover, #participate2:hover{
+    border-color: rgb(206, 206, 206);
+    border-width: 2px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(189, 189, 189);
+}
+
+#faq, #accomodation{
+    text-decoration: underline;
+    color: rgb(144, 0, 201);
 }
