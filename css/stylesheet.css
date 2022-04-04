@@ -15,5 +15,32 @@
 }
 
 a {
-  color: brown;
+  text-decoration:none;
+}
+a:active{
+  font-weight: bold;
+}
+a:link{
+color : rgb(219, 219, 219);
+
+}
+a:visited {
+  color : rgb(219, 219, 219);
+ }
+ a:hover {  
+  color: rgb(255, 123, 0);
+}
+
+body {
+  min-height: 100%;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+.artistImage {
+  width: 100%;
+  height: fit-content;
 }
