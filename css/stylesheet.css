@@ -39,8 +39,18 @@ footer {
   bottom: 0;
   width: 100vw;
 }
-
+/* -------------lineup Pages------------------ */
 .artistImage {
   width: 100%;
-  height: fit-content;
+  object-fit: cover;
 }
+#bandInfo {
+}
+#bandText {
+  overflow: scroll;
+  scrollbar-width: none;
+  height: 32vh;
+}
+
+
+

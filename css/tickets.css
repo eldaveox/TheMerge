@@ -20,9 +20,14 @@ footer {
     width: 100vw;
 }
 
+#ticketInfo {
+    font-size: 2rem;
+}
+
 #participate1, #participate2{
     border-color: rgb(206, 206, 206);
     border-width: 2px;
+    background-color: #eee;
     color: rgb(144, 0, 201);
 }
 #participate1:hover, #participate2:hover{
