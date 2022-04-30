@@ -1,39 +1,11 @@
-#lineup {
-    font-size: 3.3vw;
-    font-weight: bold;
-}
-
-a:hover {
-    padding-left: 15px;
-    border-radius: 4px;
-    box-shadow: inset 0 0 0 0;
-    transition: ease-out 0.3s;
-    outline: none;
-  }
-
- 
-
-  /* -------------media queries------------------ */
-@media screen and (max-width:620px){
-    .navbar {
-      font-size: 1.2rem;
-    }
-    #lineup {
-        font-size: 9vw;
-    }
-    .navbar-nav > li{
-      margin-left:auto;
-      margin-right: 0;
-    }
+ /* -------------media queries------------------ */
+ @media screen and (max-width:620px){
+   
   
     .linkHide {
       display: none;
     }
   
-    #ticketInfo {
-        font-size: 1.5rem;
-    }
-
     footer {
         position: static;
        
@@ -75,6 +47,11 @@ a:hover {
       padding-left: 4vw;
       font-size: 1.5rem;
     }
+
+    .login {
+      height: 20vw;
+    }
+    
   }
   @media screen and (min-width:1920px){
     .navbar {
@@ -82,5 +59,8 @@ a:hover {
     }
     footer {
       position: static;
+    }
+    .login {
+      height: 15vw;
     }
   }

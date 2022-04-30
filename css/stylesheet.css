@@ -6,7 +6,7 @@ body {
 .navbar {
   font-weight: bold;
   padding-left: 5.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .navbar-nav > li{
@@ -112,4 +112,70 @@ footer {
   border-top: none;
 }
 
-/* -------------media queries index------------------ */
+/* -------------media queries------------------ */
+@media screen and (max-width:620px){
+  .navbar {
+    font-size: 1.2rem;
+  }
+
+  .navbar-nav > li{
+    margin-left:auto;
+    margin-right: 0;
+  }
+
+  .linkHide {
+    display: none;
+  }
+
+  #bandListMainPage{
+    font-size: 2vh;
+  }
+  #bottomBold {
+    text-align: center;
+  }
+
+  .year {
+    display: none;
+  } 
+}
+
+@media screen and (min-width:620px){
+  .navbar-nav > li{
+    margin-left:auto;
+    margin-right: 0;
+  }
+  
+  #bandListMainPage{
+    font-size: 2vh;
+  } 
+} 
+/*large tablets & desktop styles*/
+
+@media screen and (min-width:960px){
+  
+  .navbar {
+    padding-left: 3.2rem;
+  } 
+}
+
+/*desktop styles*/
+
+@media screen and (min-width:1200px){
+  .navbar {
+    padding-left: 2.8rem;
+    font-size: 1.5rem;
+  }
+
+  footer {
+    position: absolute;
+  }
+
+}
+@media screen and (min-width:1920px){
+  .navbar {
+    padding-left: 4.3vw;
+  }
+  footer {
+    position: absolute;
+  }
+}
