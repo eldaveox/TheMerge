@@ -1,3 +1,8 @@
+body {
+  min-height: 100%;
+  font-family: europa,sans-serif;
+}
+
 #bgVideo {
   min-width: 100vw;
   min-height: 100vh;
@@ -9,9 +14,13 @@
   bottom: 0;
   z-index: -1;
 }
+#title, #date {
+  font-weight: bold;
+  font-size: 5vw;
+}
 
 #bandListMainPage {
-    font-size: 2vw;
+    font-size: 2.5vw;
 }
 
 a {
@@ -27,15 +36,21 @@ color : rgb(219, 219, 219);
 a:visited {
   color : rgb(219, 219, 219);
  }
- a:hover {  
+a:hover {  
   color: rgb(255, 123, 0);
 }
 
-body {
-  min-height: 100%;
+h1 {
+  font-size: 5vh;
 }
+
+.indexButton, #andManyMore {
+  font-family: europa,sans-serif;
+  color: indigo;
+  font-weight: bold;
+}
+
 footer {
-  position: fixed;
   bottom: 0;
   width: 100vw;
 }
