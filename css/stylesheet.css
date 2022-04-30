@@ -3,6 +3,17 @@ body {
   font-family: europa,sans-serif;
 }
 
+.navbar {
+  font-weight: bold;
+  padding-left: 5.5rem;
+  font-size: 2rem;
+}
+
+.navbar-nav > li{
+  margin-left:30px;
+  margin-right:50px;
+}
+
 #bgVideo {
   min-width: 100vw;
   min-height: 100vh;
@@ -19,7 +30,7 @@ body {
   padding-left: 5vw;
   padding-right: 5vw;
 }
-#title, #date {
+#title, #date, #whereToFindUs {
   font-weight: bold;
   font-size: 5vw;
 }
@@ -61,6 +72,7 @@ h1 {
 footer {
   bottom: 0;
   width: 100vw;
+  font-weight: bold;
 }
 /* -------------lineup Pages------------------ */
 .artistImage {
@@ -92,6 +104,12 @@ footer {
 }
 #loginFooter {
   position: absolute;
+}
+
+.signIn{
+  background-color: rgb(144, 0, 201);
+  color: #eee;
+  border-top: none;
 }
 
 /* -------------media queries index------------------ */
