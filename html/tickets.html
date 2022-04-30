@@ -16,11 +16,11 @@
 
   <!-- Navigation -->
 
-  <nav class="navbar navbar-expand-lg navbar-light pt-5 pb-3">
+  <nav class="navbar navbar-expand-lg navbar-dark pt-5 pb-3">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      <button class="navbar-toggler border-0 ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon "></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
@@ -34,10 +34,10 @@
             <a class="nav-link" href="lineup.html">Lineup</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Info</a>
+            <a class="nav-link" href="info.html">Info</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" href="login.html">Login</a>
           </li>         
         </ul>    
       </div>
@@ -50,17 +50,17 @@
     <source src="../mp4/smoke2.mp4" type="video/mp4">
   </video>
 
-<div class="container pt-4 text-light">
+<div class="mainContainer container-fluid text-light">
     <div class="row">
         <div class="col">
-            <h1>MERGE 2022</h1>
+            <h1 id="title">MERGE 2022</h1>
         </div>
     </div>
-    <div class="row pt-3">
+    <div class="row">
         <div class="col" id="ticketInfo">
             <p><b>With participating in the raffle for the Merge 2022 you will get the <br> exclusive chance of winning a ticket . Winners are going to be <br>
               chosen randomly and notified per Mail on 01/05/2022. Please <br> make sure to accept the ticket in the Ticket Area before the 15/05/2022. <br>
-              You can check the status of your ticket in the Ticket Area anytime. Participating in groups elevates the chance to win.</b></p>
+              You can check the status of your ticket in the Ticket Area anytime. <br> Participating in groups elevates the chance to win.</b></p>
         </div>
     </div>
 
@@ -71,18 +71,18 @@
     </div>
 
     <div class="row pt-5">
-        <div class="col">
+        <div class="col-5">
             <H3>SINGLE PASS</H3>     
         </div>
-        <div class="col text-end">
-            <button  class="btn" id="participate1">PARTICIPATE</button>     
+        <div class="col-2 text-end">
+            <button class="participate btn" id="participate1">PARTICIPATE</button>     
         </div>
     </div>
     <div class="row pt-5">
-        <div class="col">
+        <div class="col-5">
             <H3>GROUP PASS</H3>     
         </div>
-        <div class="col text-end">
+        <div class="col-2 text-end">
             <button class="btn" id="participate2">PARTICIPATE</button>     
         </div>
     </div>

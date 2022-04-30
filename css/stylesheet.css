@@ -14,6 +14,11 @@ body {
   bottom: 0;
   z-index: -1;
 }
+
+.mainContainer {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
 #title, #date {
   font-weight: bold;
   font-size: 5vw;
@@ -21,6 +26,10 @@ body {
 
 #bandListMainPage {
     font-size: 2.5vw;
+}
+
+.progress-bar {
+  background-color: rgb(0, 242, 32);
 }
 
 a {
@@ -31,13 +40,12 @@ a:active{
 }
 a:link{
 color : rgb(219, 219, 219);
-
 }
 a:visited {
   color : rgb(219, 219, 219);
  }
 a:hover {  
-  color: rgb(255, 123, 0);
+  color: rgb(144, 0, 201);
 }
 
 h1 {
@@ -84,5 +92,6 @@ footer {
 }
 #loginFooter {
   position: absolute;
-  
 }
+
+/* -------------media queries index------------------ */
