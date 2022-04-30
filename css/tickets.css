@@ -77,7 +77,7 @@ footer {
     }
 
     footer {
-        position: static;
+        position: absolute;
     }
   } 
   /*large tablets & desktop styles*/
