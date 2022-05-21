@@ -47,9 +47,14 @@ footer {
 #bandInfo {
 }
 #bandText {
-  overflow: scroll;
-  scrollbar-width: none;
   height: 32vh;
+}
+
+label{
+  font-weight: bold;
+}
+
+artistImage {
 }
 
 

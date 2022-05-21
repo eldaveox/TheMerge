@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE MERGE</title>
+
     
   <!-- bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   
   <link rel="stylesheet" href="../css/stylesheet.css">
-  <link rel="stylesheet" href="../css/tickets.css">    
+  <link rel="stylesheet" href="../css/tickets.css">
   </head>
 <body>
 
@@ -34,10 +35,10 @@
             <a class="nav-link" href="lineup.html">Lineup</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Info</a>
+            <a class="nav-link" href="info.html">Info</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" href="login.html">Login</a>
           </li>         
         </ul>    
       </div>
@@ -58,34 +59,38 @@
     </div>
     <div class="row pt-3">
         <div class="col" id="ticketInfo">
-            <p><b>With participating in the raffle for the Merge 2022 you will get the <br> exclusive chance of winning a ticket . Winners are going to be <br>
-              chosen randomly and notified per Mail on 01/05/2022. Please <br> make sure to accept the ticket in the Ticket Area before the 15/05/2022. <br>
-              You can check the status of your ticket in the Ticket Area anytime. Participating in groups elevates the chance to win.</b></p>
+            <p>With participating in the raffle for the Merge 2022 you will get the exclusive chance of winning a ticket. Winners are going to be <br>
+              chosen randomly and notified per Mail on 01/05/2022. Please make sure to accept the ticket in the Ticket Area before the 15/05/2022. <br>
+              You can check the status of your ticket in the Ticket Area anytime. Participating in groups elevates the chance to win.</p>
+            <br style=line-height:18px;><br>
         </div>
     </div>
 
     <div class="row pt-3">
         <div class="col">
-            <H2>Tickets</H2>     
+            <H2>TICKETS</H2>
         </div>
     </div>
 
     <div class="row pt-5">
         <div class="col">
-            <H3>SINGLE PASS</H3>     
+            <H4>SINGLE PASS</H4>
         </div>
         <div class="col text-end">
-            <button  class="btn" id="participate1">PARTICIPATE</button>     
+            <button  class="btn" id="participate1" onclick="location.href='raffle.html'">PARTICIPATE</button>
         </div>
     </div>
     <div class="row pt-5">
         <div class="col">
-            <H3>GROUP PASS</H3>     
+            <H4>GROUP PASS</H4>
         </div>
         <div class="col text-end">
-            <button class="btn" id="participate2">PARTICIPATE</button>     
+            <button class="btn" id="participate2" onclick="location.href='raffle.html'">PARTICIPATE</button>
         </div>
     </div>
+
+    <br style=line-height:18px;><br>
+
     <div class="row pt-5">
       <div class="col pb-3">
         <a href="#" id="faq">FAQ</a>
@@ -101,27 +106,21 @@
 <footer>
   <div class="container-fluid text-center mt-2 pt-5 pb-3" id="footerLinks">
     <div class="row">
-      <div class="col">
-        <a href="#">FOLLOW US</a>
-      </div>
-      <div class="col">
-        <a href="#">NEWSLETTER</a>
-      </div>
-      <div class="col">
-        <a href="#">IMPRINT</a>
-      </div>
-      <div class="col">
-        <a href="#">PRIVACY</a>
-      </div>
-      <div class="col">
-        <a href="#">CONTACT</a>
-      </div>
-      <div class="col">
-        <a href="#">AGB</a>
-      </div>
-      <div class="col">
-        <a href="#">PRESS</a>
-      </div>
+        <div class="col">
+            <a href="https://facebook.com/">FOLLOW US</a>
+        </div>
+        <div class="col">
+            <a href="impressum.html">IMPRINT</a>
+        </div>
+        <div class="col">
+            <a href="privacy.html">PRIVACY</a>
+        </div>
+        <div class="col">
+            <a href="contact.html">CONTACT</a>
+        </div>
+        <div class="col">
+            <a href="agb.html">AGB</a>
+        </div>
     </div>
   </div>
 </footer>
