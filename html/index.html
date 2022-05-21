@@ -16,9 +16,9 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark pt-5 pb-3">
     <div class="container-fluid">
-      <button class="navbar-toggler border-0 ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon "></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
@@ -46,41 +46,34 @@
     <source src="../mp4/smoke.mp4" type="video/mp4">
   </video>
 
-  <div class="mainContainer container-fluid text-light">
+
+  <div class="container text-light pt-4">
     <div class="row">
-      <h1 class="col-12" id="title">MERGE FESTIVAL</h1>
+      <h1 class="col-12">MERGE FESTIVAL</h1>
     </div>
     <div class="row">
-      <h2 class="col-12" id="date">JUNE 2022</h2>
+      <h2 class="col-12">JUNE 2022</h2>
     </div>
     <div class="row">
-      <div class="col-sm-3">
-        <button type="button" class="indexButton btn btn-light mt-3 mb-3">PARTICIPATE IN RAFFLE</button>
+      <div class="col-2">
+        <button type="button" class="btn btn-light mt-3 mb-3" onclick="location.href='tickets.html'">PARTICIPATE IN RAFFLE</button>
       </div>      
     </div>
     <div class="row">
       <div class="col" id="bandListMainPage">
-        <p>PENDULUM + ALBI X + ALYONA ALYONA + ARLO PARKS + AVALON EMERSON +
-          BAD MANNERS X HERRENSAUNA + BIIG PIIG + BLADEE + BOY HARSHER +          
-          CAROLINE POLACHEK + DANIEL AVERY + DANIEL RYAN SPAULDING +          
-          DANNY L HARLE + DJ MARCELLE + DJ SEINFELD – MIRRORS ++          
-          ELI PREISS + ELIOTT LITROWSKI + FRED AGAIN.. + FUTUREBAE +        
-          GEORGE RILEY + GOLDLINK + GREENTEA PENG + HONEY DIJON +
-        <p id="allBands" style="display:none" >AGYENA + ALBI X + ALYONA ALYONA + ARLO PARKS + AVALON EMERSON +
-          BAD MANNERS X HERRENSAUNA + BIIG PIIG + BLADEE + BOY HARSHER +          
-          CAROLINE POLACHEK + DANIEL AVERY + DANIEL RYAN SPAULDING +          
-          DANNY L HARLE + DJ MARCELLE + DJ SEINFELD – MIRRORS +          
-          ELI PREISS + ELIOTT LITROWSKI + FRED AGAIN.. + FUTUREBAE +          
-          GEORGE RILEY + GOLDLINK + GREENTEA PENG + HONEY DIJON +          
-          JAMIE XX + JAYDA G + JOY ORBISON + KAMAAL WILLIAMS + KAREEM ALI          
-          + KESHAVARA + LAYLA + LEBANON HANOVER + LITTLE SIMZ +          
-          MAMA SNAKE + MANUEL FISCHER + MAUSKOVIC DANCE BAND + MEZIGUE +        
-          MOXIE B2B GABRIELLE KWARTENG + MYD + NENE H + OVERMONO + JIMMY + MIKEY +         
-          PABLLO VITTAR + PALMS TRAX B2B HUNEE + PC MUSIC ARTISTS +          
-          PEGGY GOU + PINKPANTHERESS + PLANNINGTOROCK + POLO & PAN +          
-          POTÉ + PRIYA RAGU+ PROSPA + SAD NIGHT DYNAMITE + SASSY 009 +          
-          SCHMYT + SEGA BODEGA + SHERELLE B2B TIM REAPER + SHYGIRL +          
-          SOFIA KOURTESIS + SYMBA + THE BLAZE + TIGHTILL + TIRZAH +          
+        <p>ALBI X + ALYONA ALYONA + ARLO PARKS + AVALON EMERSON + <br>
+          BAD MANNERS X HERRENSAUNA + BIIG PIIG + BLADEE + BOY HARSHER + <br>
+          CAROLINE POLACHEK + DANIEL AVERY + DANIEL RYAN SPAULDING + <br>
+          DANNY L HARLE + DJ MARCELLE + DJ SEINFELD + MIRRORS + ELI PREISS + <br>
+          ELIOTT LITROWSKI + FUTUREBAE + GEORGE RILEY + GOLDLINK +
+        <p id="allBands" style="display:none" >JAMIE XX + JAYDA G + JOY ORBISON
+          + KAMAAL WILLIAMS + KAREEM ALI + KESHAVARA + LAYLA + LEBANON HANOVER + LITTLE SIMZ +
+          MAMA SNAKE + MANUEL FISCHER + MAUSKOVIC DANCE BAND + MEZIGUE + MYD + NENE H + OVERMONO
+          + JIMMY + MIKEY + PABLLO VITTAR + PALMS TRAX B2B HUNEE + <br>
+          PC MUSIC ARTISTS + PEGGY GOU + PINKPANTHERESS + PLANNINGTOROCK +<br>
+          POLO & PAN + POTÉ + PRIYA RAGU+ PROSPA + SAD NIGHT DYNAMITE +<br>
+          SASSY 009 + SCHMYT + SEGA BODEGA + SHERELLE B2B TIM REAPER + <br>
+          SHYGIRL + SYMBA + THE BLAZE + TIGHTILL + TIRZAH +
           TOM MISCH + TSHA + U.R.TRAX + VTSS + WEIL + YU SU +          
           YUNG SINGH + YVES TUMOR + ZOUJ +
           </p>
@@ -88,53 +81,48 @@
     </div>
     <div class="row">
       <div class="col">
-        <div class="col-lg-2 pb-3">
+        <div class="col-2 pb-3">
           <button type="button" class="btn btn-light mt-3 mb-3" id="andManyMore" style="display: block" onclick="displayBands()">AND MANY MORE</button>
         </div> 
       </div>
     </div>
     <div class="row">
-      <div class="col-7 col-md-7 col-lg-3">
+      <div class="col-2">
         <div class="progress mt-1">
-          <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+          <div class="progress-bar " role="progressbar" style="width: 50%" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
       </div>
-      <div class="col-5 col-lg-9">
+      <div class="col-2">
         <p>x days left until</p>
       </div>
     </div>
-    <div class="row" id="bottomBold">
-      <div class="col-sm-12 col-lg-6">
+    <div class="row">
+      <div class="col-6">
        <h1>THE MERGE</h1>
       </div>
-      <div class="year col-sm-12 col-lg-5 align-self-end text-end">
-        <h3>2022</h3>
+      <div class="col-6 align-self-end text-end">
+        <h7>2022</h7>
       </div>
     </div>
   </div>
+  <br style=line-height:20px;><br>
   <footer>
-  <div class="container-fluid text-center mt-2 pt-3 pb-3" id="footerLinks">
+  <div class="container-fluid text-center mt-2 pt-5 pb-3" id="footerLinks">
     <div class="row">
-      <div class="followUs col">
-        <a href="#">FOLLOW US</a>
+      <div class="col">
+        <a href="https://facebook.com/">FOLLOW US</a>
       </div>
-      <div class="linkHide col">
-        <a href="#">NEWSLETTER</a>
+      <div class="col">
+        <a href="impressum.html">IMPRINT</a>
       </div>
-      <div class="linkHide  col">
-        <a href="#">IMPRINT</a>
+      <div class="col">
+        <a href="privacy.html">PRIVACY</a>
       </div>
-      <div class="linkHide col">
-        <a href="#">PRIVACY</a>
+      <div class="col">
+        <a href="contact.html">CONTACT</a>
       </div>
-      <div class="linkHide col">
-        <a href="#">CONTACT</a>
-      </div>
-      <div class="linkHide col">
-        <a href="#">AGB</a>
-      </div>
-      <div class="linkHide col">
-        <a href="#">PRESS</a>
+      <div class="col">
+        <a href="agb.html">AGB</a>
       </div>
     </div>
   </div>

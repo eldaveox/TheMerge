@@ -2,19 +2,22 @@ body {
     min-height: 100%;
 }
 
-h2 {
-    font-weight: bold;
-    font-size: 4vh;
-}
-
-h3 {
-    font-size: 3vh;
-}
-
+#splatter {
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 30%;
+  }
 footer {
+    position: fixed;
     bottom: 0;
     width: 100vw;
-    position: absolute;
 }
 
 #ticketInfo {
@@ -39,69 +42,7 @@ footer {
     color: rgb(144, 0, 201);
 }
 
+p {
+    font-size:18px;
+}
 
-/* -------------media queries------------------ */
-@media screen and (max-width:620px){
-    .navbar {
-      font-size: 1.2rem;
-    }
-  
-    .navbar-nav > li{
-      margin-left:auto;
-      margin-right: 0;
-    }
-  
-    .linkHide {
-      display: none;
-    }
-  
-    #ticketInfo {
-        font-size: 1.5rem;
-    }
-
-    footer {
-        position: static;
-       
-    }
-  }
-  
-  @media screen and (min-width:620px){
-    .navbar-nav > li{
-      margin-left:auto;
-      margin-right: 0;
-    }
-
-    #ticketInfo {
-        font-size: 2rem;
-        margin-top: 10px;
-    }
-
-    footer {
-        position: absolute;
-    }
-  } 
-  /*large tablets & desktop styles*/
-  
-  @media screen and (min-width:960px){
-    
-    .navbar {
-      padding-left: 3.2rem;
-    } 
-  }
-  
-  /*desktop styles*/
-  
-  @media screen and (min-width:1200px){
-    .navbar {
-      padding-left: 5rem;
-      font-size: 1.5rem;
-    }
-  }
-  @media screen and (min-width:1920px){
-    .navbar {
-      padding-left: 4.3vw;
-    }
-    footer {
-      position: absolute;
-    }
-  }

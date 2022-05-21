@@ -1,5 +1,5 @@
 #lineup {
-    font-size: 3.3vw;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -16,7 +16,7 @@ a:hover {
   /* -------------media queries------------------ */
 @media screen and (max-width:620px){
     .navbar {
-      font-size: 1.2rem;
+      font-size: 18px;
     }
     #lineup {
         font-size: 9vw;
@@ -52,7 +52,7 @@ a:hover {
     }
 
     #lineup {
-        font-size: 7vw;
+        font-size: 50px;
     }
 
     footer {
