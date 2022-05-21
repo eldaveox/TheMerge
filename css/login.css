@@ -1,0 +1,66 @@
+ /* -------------media queries------------------ */
+ @media screen and (max-width:620px){
+   
+  
+    .linkHide {
+      display: none;
+    }
+  
+    footer {
+        position: static;
+       
+    }
+  }
+  
+  @media screen and (min-width:620px){
+    .navbar-nav > li{
+      margin-left:auto;
+      margin-right: 0;
+    }
+
+    #ticketInfo {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    #lineup {
+        font-size: 7vw;
+    }
+
+    footer {
+        position: static;
+    }
+  } 
+  /*large tablets & desktop styles*/
+  
+  @media screen and (min-width:960px){
+    
+    .navbar {
+      padding-left: 3.2rem;
+    } 
+  }
+  
+  /*desktop styles*/
+  
+  @media screen and (min-width:1200px){
+    .navbar {
+      padding-left: 4vw;
+      font-size: 1.5rem;
+    }
+
+    .login {
+      height: 20vw;
+    }
+    
+  }
+  @media screen and (min-width:1920px){
+    .navbar {
+      padding-left: 4.3vw;
+    }
+    footer {
+      position: static;
+    }
+    .login {
+      height: 12vw;
+    }
+  }
