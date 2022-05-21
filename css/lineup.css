@@ -1,7 +1,4 @@
-#lineup {
-    font-size: 18px;
-    font-weight: bold;
-}
+
 
 a:hover {
     padding-left: 15px;
@@ -11,12 +8,15 @@ a:hover {
     outline: none;
   }
 
+
+
  
 
   /* -------------media queries------------------ */
 @media screen and (max-width:620px){
+
     .navbar {
-      font-size: 18px;
+      font-size: 1.2rem;
     }
     #lineup {
         font-size: 9vw;
@@ -52,7 +52,7 @@ a:hover {
     }
 
     #lineup {
-        font-size: 50px;
+        font-size: 3vw;
     }
 
     footer {
@@ -62,19 +62,11 @@ a:hover {
   /*large tablets & desktop styles*/
   
   @media screen and (min-width:960px){
-    
-    .navbar {
-      padding-left: 3.2rem;
-    } 
   }
   
   /*desktop styles*/
   
   @media screen and (min-width:1200px){
-    .navbar {
-      padding-left: 4vw;
-      font-size: 1.5rem;
-    }
   }
   @media screen and (min-width:1920px){
     .navbar {
