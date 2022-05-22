@@ -23,5 +23,17 @@ app.get('/info.html',(req, res) => {
 app.get('/login.html',(req, res) => {
     res.sendFile (path.join(__dirname, '../html/login.html'))
 })
+app.get('/impressum.html',(req, res) => {
+    res.sendFile (path.join(__dirname, '../html/impressum.html'))
+})
+app.get('/privacy.html',(req, res) => {
+    res.sendFile (path.join(__dirname, '../html/privacy.html'))
+})
+app.get('/contact.html',(req, res) => {
+    res.sendFile (path.join(__dirname, '../html/contact.html'))
+})
+app.get('/agb.html',(req, res) => {
+    res.sendFile (path.join(__dirname, '../html/agb.html'))
+})
 
 app.listen(port, console.info(`Listening on port ${port}`))
