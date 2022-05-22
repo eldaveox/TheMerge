@@ -35,5 +35,8 @@ app.get('/contact.html',(req, res) => {
 app.get('/agb.html',(req, res) => {
     res.sendFile (path.join(__dirname, '../html/agb.html'))
 })
+app.get('/raffle.html',(req, res) => {
+    res.sendFile (path.join(__dirname, '../html/raffle.html'))
+})
 
 app.listen(port, console.info(`Listening on port ${port}`))
