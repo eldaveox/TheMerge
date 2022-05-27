@@ -2,35 +2,40 @@ const express = require('express')
 const app = express()
 const path = require('path');
 const bcrypt = require('bcrypt')
+// const passport = require ('passport')
+// const initializePassport = require('./passport-comfig');
+// const passport = require('passport');
+// const passport = require('passport');
+// initializePassport(passport)
 const port = 3000
 // ---------------------------------login---------------------------------
-app.use(express.json())
-
 const users = []
+app.use(express.json())
+app.use(express.urlencoded({ extended: false}))
 
-app.get('/raffle', (req,res)=>{
+app.get('/users', (req,res)=>{
     res.json(users)
 })
 
-app.post('/raffle',async (req,res)=>{
-
+app.post('/users',async (req,res)=>{
     try {
        
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
         const user = { email: req.body.email, password: hashedPassword }
         users.push(user)
+        res.redirect('/login.html')
         res.status(201).send()
     } 
    
     catch {
-        res.redirect(path.join(__dirname, '../html/raffle.html'))
+        res.redirect(path.join(__dirname, '../html/privacy.html'))
     }
     console.log(users)
 })
 
 app.post('/login',async (req,res)=>{
-    const user = users.find(user.email = req.body.email)
-    if (user = null) {
+    const user = users.find(user => user.email = req.body.email)
+    if (user == null) {
         return res.status(400).send ('cannot find user')
     }
     try {
@@ -44,7 +49,7 @@ app.post('/login',async (req,res)=>{
     }
 })
 
-// -----------------------------------------------------------------------
+// -----------------------routes------------------------------------------------
 
 app.use(express.static(path.join(__dirname, '../')));
 
@@ -82,6 +87,16 @@ app.get('/agb.html',(req, res) => {
 app.get('/raffle.html',(req, res) => {
     res.sendFile (path.join(__dirname, '../html/raffle.html'))
 })
+
+// -----------------------------------------
+
+
+
+// -----------------------------------------
+
+
+
+
 
 
 app.listen(port, console.info(`Listening on port ${port}`))
