@@ -1,15 +1,24 @@
 const express = require('express')
 const app = express()
-const path = require('path');
+const path = require('path')
 const bcrypt = require('bcrypt')
-// const passport = require ('passport')
-// const initializePassport = require('./passport-comfig');
-// const passport = require('passport');
-// const passport = require('passport');
-// initializePassport(passport)
+const session =require('express-session')
+const cookieParser =require('cookie-parser')
 const port = 3000
+
+// ---------------------------------session-------------------------------
+    app.use(cookieParser())
+    app.use(
+        session({
+        secret: 'key that will sign cookie', //only for production - erase later
+        resave: true,
+        saveUninitialized: true
+    }))
+// -----------------------------------------------------------------------
 // ---------------------------------login---------------------------------
 const users = []
+
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: false}))
 
@@ -28,7 +37,7 @@ app.post('/users',async (req,res)=>{
     } 
    
     catch {
-        res.redirect(path.join(__dirname, '../html/privacy.html'))
+        res.redirect('/raffle.html')
     }
     console.log(users)
 })
@@ -40,7 +49,11 @@ app.post('/login',async (req,res)=>{
     }
     try {
        if(await  bcrypt.compare(req.body.password, user.password)){
-           res.send('success!!!')
+            req.session.user = user;
+            req.session.save();
+            console.log(session)
+            res.redirect('/dashboard.html')
+          
        }else {
            res.send('not allowed!')
        }
@@ -70,6 +83,9 @@ app.get('/info.html',(req, res) => {
 })
 app.get('/login.html',(req, res) => {
     res.sendFile (path.join(__dirname, '../html/login.html'))
+})
+app.get('/dashboard.html',(req, res) => {
+    res.sendFile (path.join(__dirname, '../html/dashboard.html'))
 })
 
 app.get('/impressum.html',(req, res) => {
