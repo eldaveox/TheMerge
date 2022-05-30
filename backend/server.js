@@ -3,21 +3,19 @@ const app = express()
 const path = require('path')
 const bcrypt = require('bcrypt')
 const session =require('express-session')
-const cookieParser =require('cookie-parser')
 const port = 3000
 
 // ---------------------------------session-------------------------------
-    app.use(cookieParser())
     app.use(
         session({
         secret: 'key that will sign cookie', //only for production - erase later
-        resave: true,
-        saveUninitialized: true
+        resave: false,
+        saveUninitialized: false
     }))
+    console.log (session)
 // -----------------------------------------------------------------------
 // ---------------------------------login---------------------------------
 const users = []
-
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false}))
@@ -42,6 +40,8 @@ app.post('/users',async (req,res)=>{
     console.log(users)
 })
 
+
+
 app.post('/login',async (req,res)=>{
     const user = users.find(user => user.email = req.body.email)
     if (user == null) {
@@ -51,9 +51,7 @@ app.post('/login',async (req,res)=>{
        if(await  bcrypt.compare(req.body.password, user.password)){
             req.session.user = user;
             req.session.save();
-            console.log(session)
-            res.redirect('/dashboard.html')
-          
+            res.redirect('/dashboard.html') 
        }else {
            res.send('not allowed!')
        }
@@ -61,6 +59,21 @@ app.post('/login',async (req,res)=>{
         res.status(500).send()
     }
 })
+
+
+app.post('/logout', (req,res)=>{
+    req.session.destroy()
+    res.redirect('/login.html')
+    res.status(201).send()
+})
+app.post('/update', (req,res)=>{
+    res.redirect('/update.html')
+})
+app.put('/update', (req,res)=>{
+    console.log (session)
+})
+
+
 
 // -----------------------routes------------------------------------------------
 
@@ -87,7 +100,6 @@ app.get('/login.html',(req, res) => {
 app.get('/dashboard.html',(req, res) => {
     res.sendFile (path.join(__dirname, '../html/dashboard.html'))
 })
-
 app.get('/impressum.html',(req, res) => {
     res.sendFile (path.join(__dirname, '../html/impressum.html'))
 })
@@ -102,6 +114,9 @@ app.get('/agb.html',(req, res) => {
 })
 app.get('/raffle.html',(req, res) => {
     res.sendFile (path.join(__dirname, '../html/raffle.html'))
+})
+app.get('/update.html',(req, res) => {
+    res.sendFile (path.join(__dirname, '../html/update.html'))
 })
 
 // -----------------------------------------
