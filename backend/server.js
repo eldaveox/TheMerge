@@ -15,7 +15,7 @@ const port = 3000
     console.log (session)
 // -----------------------------------------------------------------------
 // ---------------------------------login---------------------------------
-const users = []
+let users = []
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false}))
@@ -26,9 +26,9 @@ app.get('/users', (req,res)=>{
 
 app.post('/users',async (req,res)=>{
     try {
-       
+        
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
-        const user = { email: req.body.email, password: hashedPassword }
+        const user = { id: Date.now().toString(), email: req.body.email, password: hashedPassword }
         users.push(user)
         res.redirect('/login.html')
         res.status(201).send()
@@ -40,7 +40,28 @@ app.post('/users',async (req,res)=>{
     console.log(users)
 })
 
+app.delete ('/users/:id',(req,res) => {
 
+    const { id } = req.params
+    const deleted = users.find(user => user.id === id) //this is needed to identify the user in the array
+    if(deleted){
+        users = users.filter(user => user.id !== id)
+        res.status(200).json(deleted)
+    }else {
+        res.status(404).json({message: "User not found"})
+    }
+})
+
+app.get ('/users/:id',(req,res) => {
+
+    const { id } = req.params
+    const found = users.find(user => user.id === id)
+    if(found){        
+        res.status(200).json(found)
+    }else {
+        res.status(404).json({message: "User does not exist"})
+    }
+})
 
 app.post('/login',async (req,res)=>{
     const user = users.find(user => user.email = req.body.email)
@@ -69,9 +90,7 @@ app.post('/logout', (req,res)=>{
 app.post('/update', (req,res)=>{
     res.redirect('/update.html')
 })
-app.put('/update', (req,res)=>{
-    console.log (session)
-})
+
 
 
 
