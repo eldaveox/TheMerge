@@ -24,7 +24,7 @@ app.get('/users', (req,res)=>{
     res.json(users)
 })
 
-v,async (req,res)=>{
+app.post('/users',async (req,res)=>{
     try {
         
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
