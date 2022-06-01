@@ -17,7 +17,6 @@ const frontend = require('../js/frontend')
 // -----------------------------------------------------------------------
 // ---------------------------------login---------------------------------
 let users = []
-
 app.use(express.json())
 app.use(express.urlencoded({ extended: false}))
 
@@ -25,7 +24,7 @@ app.get('/users', (req,res)=>{
     res.json(users)
 })
 
-app.post('/users',async (req,res)=>{
+v,async (req,res)=>{
     try {
         
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
@@ -53,19 +52,16 @@ app.delete ('/users/:id',(req,res) => {
     }
 })
 
-app.put ('/users/:id',(req,res) => {
+app.put ('/users/:id',(req,res) => { //in postman -> body -> JSON!!!
     const { id } = req.params //variable to identify id
     const updates = req.body //variable to identify what need to be updated
-    console.log(updates)
     const index = users.findIndex(user => user.id === id)
-    console.log(index)
     if(index !== -1){
         users[index]= updates
         res.status(200).json({message: "e-mail updated"})
     }else{
         res.status(404).json({message: "User doesn't exist"})
     }
-
 })
 
 app.get ('/users/:id',(req,res) => {
@@ -153,16 +149,6 @@ app.get('/raffle.html',(req, res) => {
 app.get('/update.html',(req, res) => {
     res.sendFile (path.join(__dirname, '../html/update.html'))
 })
-
-// -----------------------------------------
-
-
-
-// -----------------------------------------
-
-
-
-
-
+// ------------------------------------------------------------------
 
 app.listen(port, console.info(`Listening on port ${port}`))
