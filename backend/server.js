@@ -4,6 +4,7 @@ const path = require('path')
 const bcrypt = require('bcrypt')
 const session =require('express-session')
 const port = 3000
+const frontend = require('../js/frontend')
 
 // ---------------------------------session-------------------------------
     app.use(
@@ -50,6 +51,21 @@ app.delete ('/users/:id',(req,res) => {
     }else {
         res.status(404).json({message: "User not found"})
     }
+})
+
+app.put ('/users/:id',(req,res) => {
+    const { id } = req.params //variable to identify id
+    const updates = req.body //variable to identify what need to be updated
+    console.log(updates)
+    const index = users.findIndex(user => user.id === id)
+    console.log(index)
+    if(index !== -1){
+        users[index]= updates
+        res.status(200).json({message: "e-mail updated"})
+    }else{
+        res.status(404).json({message: "User doesn't exist"})
+    }
+
 })
 
 app.get ('/users/:id',(req,res) => {

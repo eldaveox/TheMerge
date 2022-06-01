@@ -6,3 +6,19 @@ function displayBands(){
         y.style.display = 'none';
     }    
 }
+
+function deleteEmail(){
+    const getBtn = document.getElementById('delete')
+    const baseUrl = 'http://localhost:3000/users/:id'
+    getBtn.addEventListener ('click', getInfo), 
+    async function getInfo(e){
+        e.preventDefault()
+        const  res = await fetch(baseUrl, {
+            method: 'GET'
+        })
+        console.log(res)
+    }
+    async function postInfo(){
+
+    }
+}
