@@ -8,42 +8,42 @@ a:hover {
     outline: none;
   }
 
-
-
  
 
   /* -------------media queries------------------ */
+
+
 @media screen and (max-width:620px){
 
     .navbar {
-      font-size: 1.2rem;
+        font-size: 1.2rem;
     }
     #lineup {
         font-size: 9vw;
     }
     .navbar-nav > li{
-      margin-left:auto;
-      margin-right: 0;
+        margin-left:auto;
+        margin-right: 0;
     }
-  
+
     .linkHide {
-      display: none;
+        display: none;
     }
-  
+
     #ticketInfo {
         font-size: 1.5rem;
     }
 
     footer {
         position: static;
-       
+
     }
-  }
-  
-  @media screen and (min-width:620px){
+}
+
+@media screen and (min-width:620px){
     .navbar-nav > li{
-      margin-left:auto;
-      margin-right: 0;
+        margin-left:auto;
+        margin-right: 0;
     }
 
     #ticketInfo {
@@ -58,21 +58,22 @@ a:hover {
     footer {
         position: static;
     }
-  } 
-  /*large tablets & desktop styles*/
-  
-  @media screen and (min-width:960px){
-  }
-  
-  /*desktop styles*/
-  
-  @media screen and (min-width:1200px){
-  }
-  @media screen and (min-width:1920px){
+}
+/*large tablets & desktop styles*/
+
+@media screen and (min-width:960px){
+}
+
+/*desktop styles*/
+
+@media screen and (min-width:1200px){
+}
+@media screen and (min-width:1920px) {
     .navbar {
-      padding-left: 4.3vw;
+        padding-left: 4.3vw;
     }
+
     footer {
-      position: static;
+        position: static;
     }
-  }
+}

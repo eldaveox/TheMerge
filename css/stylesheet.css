@@ -1,7 +1,6 @@
 #bgVideo {
   min-width: 100vw;
   min-height: 100vh;
-  object-fit: cover;
   position: fixed;
   left: 0;
   right: 0;
@@ -13,6 +12,7 @@
 #bandListMainPage {
     font-size: 2vw;
 }
+
 
 a {
   text-decoration:none;
@@ -27,7 +27,8 @@ color : rgb(219, 219, 219);
 a:visited {
   color : rgb(219, 219, 219);
  }
- a:hover {  
+
+a:hover {
   color: rgb(255, 123, 0);
 }
 
@@ -53,6 +54,110 @@ footer {
 label{
   font-weight: bold;
 }
+
+/* -------------Media Queries------------------ */
+
+
+@media screen and (max-width:620px) {
+
+  .navbar {
+    font-size: 1.2rem;
+  }
+
+  #lineup {
+    font-size: 7vw;
+  }
+
+  #bandListMainPage {
+    font-size: 1.5rem;
+
+  }
+
+  .navbar-nav > li {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .linkHide {
+    display: none;
+  }
+
+  #ticketInfo {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    position: fixed;
+    font-size: 0.3rem;
+
+  }
+  .col-6{
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  p {
+    font-size:16px;
+  }
+  .progress-bar{
+    width: 100%;
+  }
+
+
+}
+
+
+@media screen and (min-width:620px){
+  .navbar-nav > li{
+    margin-left:auto;
+    margin-right: 0;
+  }
+
+  #ticketInfo {
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+
+  #lineup {
+    font-size: 9vw;
+  }
+
+  footer {
+    position: fixed;
+    font-size:1.5rem;
+  }
+}
+
+/*large tablets & desktop styles*/
+
+@media screen and (min-width:960px){
+  footer {
+    position: fixed;
+    font-size:1.5rem;
+  }
+
+}
+
+
+
+/*desktop styles*/
+
+@media screen and (min-width:1200px){
+  footer {
+    position: fixed;
+    font-size:1.5rem;
+  }
+
+
+
+}
+@media screen and (min-width:1920px) {
+
+  footer {
+    position: fixed;
+    font-size:1.5rem;
+  }
+}
+
 
 
 

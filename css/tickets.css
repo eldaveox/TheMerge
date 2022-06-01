@@ -28,7 +28,6 @@ footer {
     border-color: rgb(206, 206, 206);
     border-width: 2px;
     background-color: #eee;
-    color: rgb(144, 0, 201);
 }
 #participate1:hover, #participate2:hover{
     border-color: rgb(206, 206, 206);
@@ -39,7 +38,6 @@ footer {
 
 #faq, #accomodation{
     text-decoration: underline;
-    color: rgb(144, 0, 201);
 }
 
 p {
